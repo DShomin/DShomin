@@ -1,7 +1,7 @@
 ### Hi there 👋
 
   [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=DShomin)](https://github.com/anuraghazra/github-readme-stats)
-  ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=DShomin&show_icons=true&theme=Gradient)
+  ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=DShomin&show_icons=true&theme=dracula)
 
 <!--
 **DShomin/DShomin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
