@@ -19,6 +19,6 @@ Here are some ideas to get you started:
 
 ## Article and Paper
 - Article
-  1. [Sleep AI Challenge](http://www.aitimes.kr/news/articleView.html?idxno=20318)
+  - [Sleep AI Challenge](http://www.aitimes.kr/news/articleView.html?idxno=20318)
 - Paper
-  1. [Development of machine learning model for diagnostic disease prediction based on laboratory tests / scientific reports](https://www.nature.com/articles/s41598-021-87171-5)
+  - [Development of machine learning model for diagnostic disease prediction based on laboratory tests (scientific reports)](https://www.nature.com/articles/s41598-021-87171-5)
