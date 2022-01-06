@@ -22,7 +22,7 @@ Here are some ideas to get you started:
 | --- | --- | --- | --- | --- | --- |
 | Dacon | 한국원자력 연구원 | 진동 데이터 활용 충돌체 탐지 \- 한국원자력 연구원 | 충돌체의 가속도 센서로 충돌 위치(X, Y)와 질량(M), 충돌 속도(V)를 예측 | time series analysis | 6위  |
 | 국내기업 경진대회 | Naver | Naver AI Hackathon 2018 | 이미지를 이용하여 이미지를 검색하는 모델을 개발 하는 것이며 이미지들 간의 유사도를 측정하여 가장 비슷한 것부터 나열 | image retrieval | 10위 |
-| Kaggle | Bengali.AI | http://bengali.ai/ Handwritten Grapheme Classification | Bengali 손글씨 사진을 grapheme root, consonant diacritic, vowel diacritic을 분류 | multi-classification | 동메달 상위 10% |
+| Kaggle | Bengali.AI | Handwritten Grapheme Classification | Bengali 손글씨 사진을 grapheme root, consonant diacritic, vowel diacritic을 분류 | multi-classification | 동메달 상위 10% |
 | Kaggle | Freesound | Freesound Audio Tagging 2019 | 음성을 읽고 해당 음성이 어떤 소리였는지 분류 | audio-classification | 동메달 상위 9% |
 | 국제 경진대회 | LINE | Naver AI-Rush 2019 | 일본 라인 기사들의 meta data들을 이용하여 user가 해당 기사의 해드라인과 이미지를 보고 기사를 클릭 여부를 예측 | CTR | 5위  |
 | 국내기업 경진대회 | 건양대 | 건양대 Health Datathon 2019 | 안저 이미지를 안구질환(황반변성, 당뇨성망막병증, 망막정맥폐쇄, 정상)을 분류 | Classification | 3위  |
