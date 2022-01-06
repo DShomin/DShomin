@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 -->
 
 ## Competition Table
-| 구분  | 고객  | 프로젝트 명 | 설명  | 관련 기술 | 결과  |
+| 구분  | 주관  | 프로젝트 명 | 설명  | 관련 기술 | 결과  |
 | --- | --- | --- | --- | --- | --- |
 | Dacon | 한국원자력 연구원 | 진동 데이터 활용 충돌체 탐지 \- 한국원자력 연구원 | 충돌체의 가속도 센서로 충돌 위치(X, Y)와 질량(M), 충돌 속도(V)를 예측 | time series analysis | 6위  |
 | 국내기업 경진대회 | Naver | Naver AI Hackathon 2018 | 이미지를 이용하여 이미지를 검색하는 모델을 개발 하는 것이며 이미지들 간의 유사도를 측정하여 가장 비슷한 것부터 나열 | image retrieval | 10위 |
