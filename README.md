@@ -29,7 +29,7 @@ Here are some ideas to get you started:
 | 국내기업 경진대회 | 건양대 | 건양대 Health Datathon 2020 | 유방암 병리학 이미지를 암(양성 악성)을 분류하 | Classification | 2위  |
 | Kaggle | University of Liverpool | University of Liverpool – Ion Switching | 시뮬레이션으로 얻어진 전위 값으로 열린 세포의 channel 개수 예측 | time series analysis | 은메달 상위 4% |
 | Kaggle | Fine-Grained Visual Categorization 6 | IMet collection 2019 – FGVC6 | 메트로폴리탄 미술관의 작품들의 culture 와 tag를 분 류 | multi-classification | 동메달 상위 13% |
-| 논문  | 해당없음 | Development of machine learning model for diagnostic disease prediction based on laboratory tests | laboratory test를 통해서 얻어진 데이터를 통해 질병 예측 | Classification, XAI | 저널 등재 |
+| 논문  | scientific reports | Development of machine learning model for diagnostic disease prediction based on laboratory tests | laboratory test를 통해서 얻어진 데이터를 통해 질병 예측 | Classification, XAI | 저널 등재 |
 | 국내기업 경진대회 | 롯데정보통신 | 롯데정보통신 Vision AI 경진대회 | 다량의 상품에 대해 각 상품을 특정하는 이미지 분류 | Classification | 1위 🎉 |
 | 국내기업 경진대회 | 서울대학교병원 | Sleep AI challenge - SNUH | 수면다원검사를 통해 얻은 데이터를 이용하여 대상자의 수면 상태를 분류 | Classification | 1위 🎉 |
 | 국내기업 경진대회 | 고려대학교 의료원 | 후두암 발병 예측 모델 개발 챌린지 | 두암 이미지 데이터를 활용하여 후두암 발병 예측 인공지능 모델 개발 | Image segmentation | 2위 최우수상 |
