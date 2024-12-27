@@ -1,24 +1,6 @@
 ### Hi there 👋
 
-  ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=DShomin&show_icons=true&theme=dracula)
-
-### kaggle 
-
-  ![competition](https://road-to-kaggle-grandmaster.vercel.app/api/badges/hominlee/competition)
-<!--
-**DShomin/DShomin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  ![Lomit tech blog](https://dshomin.github.io/)
 
 ## Competition Table
 | 구분  | 주관  | 프로젝트 명 | 설명  | 관련 기술 | 결과  |
@@ -40,5 +22,9 @@ Here are some ideas to get you started:
 ## Article and Paper
 - Article
   - [Sleep AI Challenge](http://www.aitimes.kr/news/articleView.html?idxno=20318)
-- Paper
+- Published Paper
   - [Development of machine learning model for diagnostic disease prediction based on laboratory tests (scientific reports)](https://www.nature.com/articles/s41598-021-87171-5)
+  - [
+A Data-Centric Approach to Design and Analysis of a Surface-Inspection System Based on Deep Learning in the Plastic Injection Molding Industry](https://www.mdpi.com/2227-9717/9/11/1895)
+  - [
+Improved U-Net++ with Patch Split for Micro-Defect Inspection in Silk Screen Printing](https://www.mdpi.com/2076-3417/12/9/4679)
