@@ -1,6 +1,5 @@
 ### Hi there 👋
-
-  ![Lomit tech blog](https://dshomin.github.io/)
+[Tech blog](https://dshomin.github.io/)
 
 ## Competition Table
 | 구분  | 주관  | 프로젝트 명 | 설명  | 관련 기술 | 결과  |
