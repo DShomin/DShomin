@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <img src="./kaggle-badges/CompetitionsRank/plastic-white.svg" />
   <img src="https://komarev.com/ghpvc/?username=dshomin&color=blueviolet&style=flat-square&label=Profile+Views" alt="profile view counter"/>
 </p>
 
@@ -86,6 +87,7 @@ Recently, I've been exploring **Multi-Agent Systems** and have had the chance to
 ## 💻 Tools I'm Learning
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/langgraph-3776AB?style=for-the-badge&logo=langgraph&logoColor=white"/>
   <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
