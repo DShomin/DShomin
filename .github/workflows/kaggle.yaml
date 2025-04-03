@@ -4,39 +4,28 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '.github/workflows/kaggle.yaml'  # 이 파일이 변경되었을 때만 실행
   schedule:
-    # 월 1회만 실행하도록 유지
-    - cron: "11 11 1 * *" # 매월 1일 11:11 AM에 실행
-  workflow_dispatch:  # 수동 실행 옵션 유지
+    - cron: "17 11 * * *"
+  workflow_dispatch:
 
 jobs:
-  create-badges:
+  create-bades:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1  # 최소한의 git 이력만 가져오기
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          # 캐시 제거 - 종속성 잠금 파일이 없어서 발생하는 오류 해결
-          # cache: 'npm'
 
-      # 종속성 설치 개선
-      - name: Install dependencies and Puppeteer browser
-        run: |
-          cd .github/actions/kaggle-badges
-          npm ci || npm install  # ci 실패 시 일반 install 시도
-          npx puppeteer browsers install chrome@131.0.6778.85
+      - name: Install Puppeteer browser
+        run: npx puppeteer browsers install chrome@126.0.6478.63
 
-      - name: Use Local Kaggle Badges Action
-        uses: ./.github/actions/kaggle-badges
+      - name: Use Kaggle Badges Action
+        uses: spider-man-tm/kaggle-badges@v1.2.2
         with:
           user_name: hominlee
 
@@ -44,6 +33,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ./kaggle-badges/* ./kaggle-plates/* || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "Add generated SVG files"
+          git add ./kaggle-badges/* ./kaggle-plates/*
+          git commit -m "Add generated SVG files" || echo "No changes to commit"
           git push
