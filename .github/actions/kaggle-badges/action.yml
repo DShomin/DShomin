@@ -1,0 +1,9 @@
+name: "Kaggle Badges Generator"
+description: "Generate Kaggle profile badges and statistics"
+inputs:
+  username:
+    description: "Kaggle username"
+    required: true
+runs:
+  using: "node20"
+  main: "index.js"
