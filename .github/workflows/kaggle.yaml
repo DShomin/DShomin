@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '.github/workflows/kaggle.yaml'  # 이 파일이 변경되었을 때만 실행
   schedule:
-    # You can change the cron expression to suit your needs
-    - cron: "11 11 1 * *" # 11:11 AM on the 1st of every month action test
-  workflow_dispatch:
+    # 월 1회만 실행하도록 유지
+    - cron: "11 11 1 * *" # 매월 1일 11:11 AM에 실행
+  workflow_dispatch:  # 수동 실행 옵션 유지
 
 jobs:
   create-badges:
@@ -16,27 +18,30 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1  # 최소한의 git 이력만 가져오기
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: 'npm'  # npm 캐시 사용
 
-      - name: Install Puppeteer browser
-        run: npx puppeteer browsers install chrome@131.0.6778.85
+      # Puppeteer 브라우저 설치 단계 최적화
+      - name: Install dependencies and Puppeteer browser
+        run: |
+          npm ci --omit=dev  # 개발 의존성 제외하고 설치
+          npx puppeteer browsers install chrome@131.0.6778.85
 
       - name: Use Kaggle Badges Action
-        uses: DShomin/kaggle-badges@v1.2.6
+        uses: spider-man-tm/kaggle-badges@v1.2.6
         with:
-          # ex. user_name: spidermandance
           user_name: hominlee
-          # example of using GitHub Secrets
-          # user_name: ${{ secrets.KAGGLE_USERNAME }}
 
       - name: Commit and Push SVG files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ./kaggle-badges/* ./kaggle-plates/*
-          git commit -m "Add generated SVG files" || echo "No changes to commit"
+          git add ./kaggle-badges/* ./kaggle-plates/* || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "Add generated SVG files"
           git push
