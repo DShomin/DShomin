@@ -22,12 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
-          cache-dependency-path: .github/actions/kaggle-badges/package-lock.json
 
       - name: Install dependencies
         working-directory: .github/actions/kaggle-badges
-        run: npm ci
+        run: npm install
 
       - name: Install Puppeteer browser
         run: npx puppeteer browsers install chrome@131.0.6778.85
