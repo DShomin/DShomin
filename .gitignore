@@ -5,8 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Kaggle badges output
-/kaggle-badges/
-/kaggle-plates/
+kaggle-badges/
+kaggle-plates/
 
 # IDE
 .idea/
