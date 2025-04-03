@@ -6,7 +6,13 @@ async function run() {
         const username = core.getInput('username');
         const browser = await puppeteer.launch({
             headless: 'new',
-            args: ['--no-sandbox']
+            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || null,
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-gpu'
+            ]
         });
 
         const page = await browser.newPage();
@@ -36,7 +42,7 @@ async function run() {
         });
 
         await browser.close();
-        core.info('Successfully generated Kaggle badges');
+        core.setOutput('status', 'success');
     } catch (error) {
         core.setFailed(error.message);
     }

@@ -27,8 +27,12 @@ jobs:
         working-directory: .github/actions/kaggle-badges
         run: npm install
 
-      - name: Install Puppeteer browser
-        run: npx puppeteer browsers install chrome@131.0.6778.85
+      - name: Install Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+          echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true" >> $GITHUB_ENV
+          echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser" >> $GITHUB_ENV
 
       - name: Generate Kaggle Badges
         uses: ./.github/actions/kaggle-badges
