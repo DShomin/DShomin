@@ -4,10 +4,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Kaggle badges output
-kaggle-badges/
-kaggle-plates/
-
 # IDE
 .idea/
 .vscode/
