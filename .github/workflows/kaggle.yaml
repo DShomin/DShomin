@@ -30,11 +30,12 @@ jobs:
       # Puppeteer 브라우저 설치 단계 최적화
       - name: Install dependencies and Puppeteer browser
         run: |
+          cd .github/actions/kaggle-badges
           npm ci --omit=dev  # 개발 의존성 제외하고 설치
           npx puppeteer browsers install chrome@131.0.6778.85
 
-      - name: Use Kaggle Badges Action
-        uses: spider-man-tm/kaggle-badges@v1.2.6
+      - name: Use Local Kaggle Badges Action
+        uses: ./.github/actions/kaggle-badges
         with:
           user_name: hominlee
 
