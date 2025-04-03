@@ -25,13 +25,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'  # npm 캐시 사용
+          # 캐시 제거 - 종속성 잠금 파일이 없어서 발생하는 오류 해결
+          # cache: 'npm'
 
-      # Puppeteer 브라우저 설치 단계 최적화
+      # 종속성 설치 개선
       - name: Install dependencies and Puppeteer browser
         run: |
           cd .github/actions/kaggle-badges
-          npm ci --omit=dev  # 개발 의존성 제외하고 설치
+          npm ci || npm install  # ci 실패 시 일반 install 시도
           npx puppeteer browsers install chrome@131.0.6778.85
 
       - name: Use Local Kaggle Badges Action
