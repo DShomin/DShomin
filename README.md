@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="./kaggle-badges/CompetitionsRank/plastic-white.svg" />
+  <img src="./kaggle-badges/Plastic Black Badge.svg" />
   <img src="https://komarev.com/ghpvc/?username=dshomin&color=blueviolet&style=flat-square&label=Profile+Views" alt="profile view counter"/>
 </p>
 
