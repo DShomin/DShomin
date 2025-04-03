@@ -4,6 +4,8 @@ const puppeteer = require('puppeteer');
 async function run() {
     try {
         const username = core.getInput('username');
+        console.log(`Fetching Kaggle profile for user: ${username}`);
+
         const browser = await puppeteer.launch({
             headless: 'new',
             executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || null,
@@ -11,15 +13,27 @@ async function run() {
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
                 '--disable-dev-shm-usage',
-                '--disable-gpu'
+                '--disable-gpu',
+                '--window-size=1920,1080'
             ]
         });
 
         const page = await browser.newPage();
-        await page.goto(`https://www.kaggle.com/${username}`);
+        await page.setViewport({ width: 1920, height: 1080 });
+        await page.setDefaultNavigationTimeout(30000);
 
-        // Wait for profile content to load
-        await page.waitForSelector('.profile__content', { timeout: 10000 });
+        console.log('Navigating to Kaggle profile...');
+        await page.goto(`https://www.kaggle.com/${username}`, {
+            waitUntil: ['networkidle0', 'domcontentloaded']
+        });
+
+        // Wait for any of these selectors to be visible
+        console.log('Waiting for profile content to load...');
+        await Promise.race([
+            page.waitForSelector('.profile-summary', { timeout: 5000 }),
+            page.waitForSelector('.profile-info', { timeout: 5000 }),
+            page.waitForSelector('.profile-header', { timeout: 5000 })
+        ]);
 
         // Create directories if they don't exist
         const fs = require('fs');
@@ -30,20 +44,20 @@ async function run() {
             }
         });
 
-        // Take screenshots of relevant sections
+        // Wait a bit for any animations to complete
+        await page.waitForTimeout(2000);
+
+        console.log('Taking screenshot...');
         await page.screenshot({
             path: './kaggle-badges/profile.png',
-            clip: {
-                x: 0,
-                y: 0,
-                width: 800,
-                height: 400
-            }
+            fullPage: true
         });
 
         await browser.close();
+        console.log('Successfully generated Kaggle badges');
         core.setOutput('status', 'success');
     } catch (error) {
+        console.error('Error:', error.message);
         core.setFailed(error.message);
     }
 }
