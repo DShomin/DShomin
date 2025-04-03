@@ -96,6 +96,8 @@ Recently, I've been exploring **Multi-Agent Systems** and have had the chance to
   <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Mlflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/BentoML-000000?style=for-the-badge&logo=bento&logoColor=white"/>
   <img src="https://img.shields.io/badge/MLOps-607078?style=for-the-badge&logo=microsoft-azure&logoColor=white"/>
 </p>
 
